@@ -1,6 +1,6 @@
 #!/bin/sh
 echo ""
-echo "NadekoBot pm2 Startup. Please ensure you have installed pm2/NodeJS/npm with the installer script first! Running NadekoBot with pm2 means that pm2 runs NadekoBot in the background of your machine and auto-restart even after reboot. If you are running the bot already, you can close the session you are currently using and start NadekoBot with this method."
+echo "Discord-Bot pm2 Startup. Please ensure you have installed pm2/NodeJS/npm with the installer script first! Running Discord-Bot with pm2 means that pm2 runs Discord-Bot in the background of your machine and auto-restart even after reboot. If you are running the bot already, you can close the session you are currently using and start Discord-Bot with this method."
 
 echo ""
 echo ""
@@ -10,9 +10,9 @@ root=$(pwd)
 choice=5
 	echo "1. Run in pm2 with Auto Restart normally without Auto Update."
 	echo "2. Run in pm2 with Auto Restart and Auto Update."
-	echo "3. Run NadekoBot in pm2 normally without Auto Restart or Auto Update."
+	echo "3. Run Discord-Bot in pm2 normally without Auto Restart or Auto Update."
 	echo "4. Exit"
-	echo -n "Choose [1] to Run NadekoBot in pm2 with auto restart on "die" command without updating itself, [2] to Run in pm2 with Auto Updating on restart after using "die" command, and [3] to run without any auto-restarts or auto-updates."
+	echo -n "Choose [1] to Run Discord-Bot in pm2 with auto restart on "die" command without updating itself, [2] to Run in pm2 with Auto Updating on restart after using "die" command, and [3] to run without any auto-restarts or auto-updates."
 while [ $choice -eq 5 ]; do
 read choice
 if [ $choice -eq 1 ] ; then
@@ -55,11 +55,11 @@ else
 				exit 0
 			else
 				clear
-				echo "1. Run in pm2 with Auto Restart normally without updating NadekoBot."
-				echo "2. Run in pm2 with Auto Restart and update NadekoBot."
-				echo "3. Run NadekoBot in pm2 normally without Auto Restart."
+				echo "1. Run in pm2 with Auto Restart normally without updating Discord-Bot."
+				echo "2. Run in pm2 with Auto Restart and update Discord-Bot."
+				echo "3. Run Discord-Bot in pm2 normally without Auto Restart."
 				echo "4. Exit"
-				echo -n "Choose [1] to Run NadekoBot in pm2 with auto restart on "die" command without updating itself, [2] to Run in pm2 with Auto Updating on restart after using "die" command, and [3] to run without any auto restarts or auto-updates."
+				echo -n "Choose [1] to Run Discord-Bot in pm2 with auto restart on "die" command without updating itself, [2] to Run in pm2 with Auto Updating on restart after using "die" command, and [3] to run without any auto restarts or auto-updates."
 				choice=5
 			fi
 		fi
@@ -68,5 +68,5 @@ fi
 done
 
 cd "$root"
-rm "$root/nadekobotpm2start.sh"
+rm "$root/Discord-Botpm2start.sh"
 exit 0

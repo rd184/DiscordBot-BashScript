@@ -1,6 +1,6 @@
 #!/bin/sh
 echo ""
-echo "NadekoBot 1.9+"
+echo "Discord-Bot 1.9+"
 echo "Mirai was here."
 root=$(pwd)
 youtube-dl -U
@@ -12,11 +12,11 @@ else
 	echo "Dotnet is not installed. Please install dotnet."
 	exit 1
 fi
-cd "$root/NadekoBot"
+cd "$root/Discord-Bot"
 dotnet restore
 dotnet build -c Release
-cd "$root/NadekoBot/src/NadekoBot"
-echo "Running NadekoBot. Please wait."
+cd "$root/Discord-Bot/src/Discord-Bot"
+echo "Running Discord-Bot. Please wait."
 dotnet run -c Release
 echo "Done"
 

@@ -55,18 +55,18 @@ export OS ARCH VER BITS
 if [ "$BITS" = 32 ]; then
 	echo -e "Your system architecture is $ARCH which is unsupported to run Nadeko. \nYour OS: $OS \nOS Version: $VER"
 	echo
-	printf "\e[1;31mPlease check the NadekoBot self-hosting guide for alternatives.\e[0m\n"
+	printf "\e[1;31mPlease check the Discord-Bot self-hosting guide for alternatives.\e[0m\n"
 	rm nadekopm2setup.sh
 	exit 1
 fi
 
 
-echo -e "Welcome to NadekoBot's pm2 setup! \nWould you like to continue? \nYour OS: $OS \nOS Version: $VER \nArchitecture: $ARCH"
+echo -e "Welcome to Discord-Bot's pm2 setup! \nWould you like to continue? \nYour OS: $OS \nOS Version: $VER \nArchitecture: $ARCH"
 
 while true; do
     read -p "[y/n]: " yn
     case $yn in
-        [Yy]* ) clear; echo Running NadekoBot pm2 Setup; sleep 2; break;;
+        [Yy]* ) clear; echo Running Discord-Bot pm2 Setup; sleep 2; break;;
         [Nn]* ) echo Quitting...; rm nadekopm2setup.sh && exit;;
         * ) echo "Couldn't get that please type [y] for Yes or [n] for No.";;
     esac
@@ -134,7 +134,7 @@ fi
 
 
 echo
-echo "NadekoBot pm2 Installation completed..."
+echo "Discord-Bot pm2 Installation completed..."
 read -n 1 -s -p "Press any key to continue to the main menu..."
 sleep 2
 

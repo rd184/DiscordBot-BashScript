@@ -55,7 +55,7 @@ export OS ARCH VER BITS
 if [ "$BITS" = 32 ]; then
 	echo -e "Your system architecture is $ARCH which is unsupported to run Microsoft .NET Core SDK. \nYour OS: $OS \nOS Version: $VER"
 	echo
-	printf "\e[1;31mPlease check the NadekoBot self-hosting guide for alternatives.\e[0m\n"
+	printf "\e[1;31mPlease check the Discord-Bot self-hosting guide for alternatives.\e[0m\n"
 	rm nadekoautoinstaller.sh
 	exit 1
 fi
@@ -78,14 +78,14 @@ if [ "$OS" = "Ubuntu" ]; then
 	elif [ "$VER" = "18.10" ]; then
 		supported=1
 		VER=18.04
-		echo -e "Using Ubuntu 18.04 Installation scripts.\nIf the installation fails contact NadekoBot support."
+		echo -e "Using Ubuntu 18.04 Installation scripts.\nIf the installation fails contact Discord-Bot support."
 		sleep 5
 	elif [ "$VER" = "19.04" ]; then
 		supported=1
 	elif [ "$VER" = "19.10" ]; then
 		supported=1
 		#VER=19.04
-		#echo -e "Using Ubuntu 19.04 Installation scripts.\nIf the installation fails contact NadekoBot support."
+		#echo -e "Using Ubuntu 19.04 Installation scripts.\nIf the installation fails contact Discord-Bot support."
 		#sleep 5
 	elif [ "$VER" = "20.04" ]; then
 		supported=1
@@ -109,30 +109,30 @@ fi
 
 if [ "$supported" = 0 ]; then
 	echo -e "Your OS $OS $VER $ARCH looks unsupported to run Microsoft .NET Core. \nExiting..."
-	printf "\e[1;31mContact NadekoBot's support on Discord with screenshot.\e[0m\n"
+	printf "\e[1;31mContact Discord-Bot's support on Discord with screenshot.\e[0m\n"
 	rm nadekoautoinstaller.sh
 	exit 1
 fi
 
 if [ "$OS" = "Linux" ]; then
-	echo -e "Your OS $OS $VER $ARCH probably can run Microsoft .NET Core. \nContact NadekoBot's support on Discord with screenshot."
+	echo -e "Your OS $OS $VER $ARCH probably can run Microsoft .NET Core. \nContact Discord-Bot's support on Discord with screenshot."
 	rm nadekoautoinstaller.sh
 	exit 1
 fi
 
-echo -e "Welcome to NadekoBot Auto Prerequisites Installer. \nWould you like to continue? \nYour OS: $OS \nOS Version: $VER \nArchitecture: $ARCH"
+echo -e "Welcome to Discord-Bot Auto Prerequisites Installer. \nWould you like to continue? \nYour OS: $OS \nOS Version: $VER \nArchitecture: $ARCH"
 
 while true; do
     read -p "[y/n]: " yn
     case $yn in
-        [Yy]* ) clear; echo Running NadekoBot Auto-Installer; sleep 2; break;;
+        [Yy]* ) clear; echo Running Discord-Bot Auto-Installer; sleep 2; break;;
         [Nn]* ) echo Quitting...; rm nadekoautoinstaller.sh && exit;;
         * ) echo "Couldn't get that please type [y] for Yes or [n] for No.";;
     esac
 done
 
 if [ "$OS" = "Ubuntu" ]; then
-echo "This installer will download all of the required packages for NadekoBot. It will use about 350MB of space. This might take awhile to download if you do not have a good internet connection."
+echo "This installer will download all of the required packages for Discord-Bot. It will use about 350MB of space. This might take awhile to download if you do not have a good internet connection."
 echo ""
 read -n 1 -s -p "Press any key to continue..."
 	if [ "$VER" = "14.04" ]; then
@@ -401,7 +401,7 @@ elif [ "$OS" = "Debian" ]; then
 		sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
 		sudo chmod a+rx /usr/local/bin/youtube-dl
 	else
-		echo -e "Your OS $OS $VER $ARCH probably can run Microsoft .NET Core. \nContact NadekoBot's support on Discord with screenshot."
+		echo -e "Your OS $OS $VER $ARCH probably can run Microsoft .NET Core. \nContact Discord-Bot's support on Discord with screenshot."
 		rm nadekoautoinstaller.sh
 		exit 1
 	fi
@@ -500,14 +500,14 @@ elif [ "$OS" = "CentOS" ]; then
 		wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
 		chmod a+rx /usr/local/bin/youtube-dl
 	else
-		echo -e "Your OS $OS $VER $ARCH probably can run Microsoft .NET Core. \nContact NadekoBot's support on Discord with screenshot."
+		echo -e "Your OS $OS $VER $ARCH probably can run Microsoft .NET Core. \nContact Discord-Bot's support on Discord with screenshot."
 		rm nadekoautoinstaller.sh
 		exit 1
 	fi
 fi
 
 echo
-echo "NadekoBot Prerequisites Installation completed..."
+echo "Discord-Bot Prerequisites Installation completed..."
 read -n 1 -s -p "Press any key to continue..."
 sleep 2
 

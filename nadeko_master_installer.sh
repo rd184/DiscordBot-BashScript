@@ -1,14 +1,14 @@
 #!/bin/sh
 
-echo "Welcome to NadekoBot."
+echo "Welcome to Discord-Bot."
 root=$(pwd)
 echo ""
 choice=9
-	echo "1. Download NadekoBot"
+	echo "1. Download Discord-Bot"
 	echo "2. Run Nadeko (Normally)"
 	echo "3. Run Nadeko with Auto Restart in this session"
 	echo "4. Auto-Install Prerequisites (For Ubuntu, Debian and CentOS)"
-	echo "5. Set up credentials.json (If you have downloaded NadekoBot already)"
+	echo "5. Set up credentials.json (If you have downloaded Discord-Bot already)"
 	echo "6. Auto-Install pm2 (For pm2 information, see README!)"
 	echo "7. Start Nadeko in pm2 (Complete option 6 first!)"
 	echo "8. Exit"
@@ -18,7 +18,7 @@ read choice
 if [ $choice -eq 1 ] ; then
 
 	echo ""
-	echo "Downloading NadekoBot, please wait."
+	echo "Downloading Discord-Bot, please wait."
 	wget -N https://github.com/rd184/DiscordBot-BashScript/raw/1.9/nadeko_installer_latest.sh && bash "$root/nadeko_installer_latest.sh"
 	echo ""
 	bash "$root/linuxAIO.sh"
@@ -28,7 +28,7 @@ else
 			echo "Running Nadeko Normally, if you are running this to check Nadeko, use .die command on discord to stop Nadeko."
 			wget -N https://github.com/rd184/DiscordBot-BashScript/raw/1.9/nadeko_run.sh && bash "$root/nadeko_run.sh"
 			echo ""
-			echo "Welcome back to NadekoBot."
+			echo "Welcome back to Discord-Bot."
 			sleep 2s
 			bash "$root/linuxAIO.sh"
 		else
@@ -54,7 +54,7 @@ else
 					if [ $choice -eq 5 ] ; then
 						echo ""
 						echo
-echo -e "Let's begin creating a new credentials.json file if you are about to run the NadekoBot for the first time. \n \nPlease read JSON Explanations in the guide... \n \nPress [Y] when you are ready to continue or [N] to exit."
+echo -e "Let's begin creating a new credentials.json file if you are about to run the Discord-Bot for the first time. \n \nPlease read JSON Explanations in the guide... \n \nPress [Y] when you are ready to continue or [N] to exit."
 while true; do
     read -p "[y/n]: " yn
     case $yn in
@@ -64,7 +64,7 @@ while true; do
     esac
 done
 clear
-cd "$root/NadekoBot/src/NadekoBot"
+cd "$root/Discord-Bot/src/Discord-Bot"
 mv credentials.json credentials.json.old
 
 echo Please enter your bot client ID:
@@ -181,7 +181,7 @@ bash "$root/linuxAIO.sh"
 					else
 						if [ $choice -eq 6 ] ; then
 						echo ""
-						echo "Starting the setup for pm2 with NadekoBot. This only has to be done once."
+						echo "Starting the setup for pm2 with Discord-Bot. This only has to be done once."
 						wget -N https://github.com/rd184/DiscordBot-BashScript/raw/1.9/nadekopm2setup.sh && bash "$root/nadekopm2setup.sh"
 						echo ""
 						echo "Welcome back..."
@@ -190,8 +190,8 @@ bash "$root/linuxAIO.sh"
 						else
 							if [ $choice -eq 7 ] ; then
 							echo ""
-							echo "Getting the pm2 startup options for NadekoBot.."
-							wget -N https://github.com/rd184/DiscordBot-BashScript/raw/1.9/nadekobotpm2start.sh && bash "$root/nadekobotpm2start.sh"
+							echo "Getting the pm2 startup options for Discord-Bot.."
+							wget -N https://github.com/rd184/DiscordBot-BashScript/raw/1.9/Discord-Botpm2start.sh && bash "$root/Discord-Botpm2start.sh"
 							echo ""
 							sleep 2s
 							bash "$root/linuxAIO.sh"
@@ -203,11 +203,11 @@ bash "$root/linuxAIO.sh"
 									exit 0
 								else
 									clear
-									echo "1. Download NadekoBot"
+									echo "1. Download Discord-Bot"
 									echo "2. Run Nadeko (Normally)"
 									echo "3. Run Nadeko with Auto Restart in this session"
 									echo "4. Auto-Install Prerequisites (For Ubuntu, Debian and CentOS)"
-									echo "5. Set up credentials.json (If you have downloaded NadekoBot already)"
+									echo "5. Set up credentials.json (If you have downloaded Discord-Bot already)"
 									echo "6. Auto-Install pm2 (For pm2 information, see README!)"
 									echo "7. Start Nadeko in pm2 (Complete option 6 first!)"
 									echo "8. Exit"
