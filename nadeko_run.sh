@@ -15,7 +15,7 @@ fi
 cd "$root/Discord-Bot"
 dotnet restore
 dotnet build -c Release
-cd "$root/Discord-Bot/src/Discord-Bot"
+cd "$root/Discord-Bot/src/NadekoBot"
 echo "Running Discord-Bot. Please wait."
 dotnet run -c Release
 echo "Done"

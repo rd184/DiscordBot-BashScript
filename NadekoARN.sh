@@ -8,7 +8,7 @@ sleep 5s
 cd "$root/Discord-Bot"
 dotnet restore && dotnet build -c Release
 
-while :; do cd "$root/Discord-Bot/src/Discord-Bot" && dotnet run -c Release && youtube-dl -U; sleep 5s; done
+while :; do cd "$root/Discord-Bot/src/NadekoBot" && dotnet run -c Release && youtube-dl -U; sleep 5s; done
 echo ""
 echo "That didn't work? Please report in #NadekoLog Discord Server."
 sleep 3s

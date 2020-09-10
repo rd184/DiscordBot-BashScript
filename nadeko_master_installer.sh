@@ -64,7 +64,7 @@ while true; do
     esac
 done
 clear
-cd "$root/Discord-Bot/src/Discord-Bot"
+cd "$root/Discord-Bot/src/NadekoBot"
 mv credentials.json credentials.json.old
 
 echo Please enter your bot client ID:

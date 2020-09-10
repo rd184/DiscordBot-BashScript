@@ -58,19 +58,19 @@ else
     rm -rf Discord-Bot_old 1>/dev/null 2>&1
     mv -fT Discord-Bot Discord-Bot_old 1>/dev/null 2>&1
     mv "$tempdir"/Discord-Bot Discord-Bot
-    cp -f "$root/Discord-Bot_old/src/Discord-Bot/credentials.json" "$root/Discord-Bot/src/Discord-Bot/credentials.json" 1>/dev/null 2>&1
+    cp -f "$root/Discord-Bot_old/src/NadekoBot/credentials.json" "$root/Discord-Bot/src/NadekoBot/credentials.json" 1>/dev/null 2>&1
     echo ""
     echo "credentials.json copied to the new version"
-    cp -RT "$root/Discord-Bot_old/src/Discord-Bot/bin/" "$root/Discord-Bot/src/Discord-Bot/bin/" 1>/dev/null 2>&1
-    cp -RT "$root/Discord-Bot/src/Discord-Bot/bin/Release/netcoreapp1.0/data/Discord-Bot.db" "$root/Discord-Bot/src/Discord-Bot/bin/Release/netcoreapp2.1/data/Discord-Bot.db" 1>/dev/null 2>&1
-	cp -RT "$root/Discord-Bot/src/Discord-Bot/bin/Release/netcoreapp1.1/data/Discord-Bot.db" "$root/Discord-Bot/src/Discord-Bot/bin/Release/netcoreapp2.1/data/Discord-Bot.db" 1>/dev/null 2>&1
-    cp -RT "$root/Discord-Bot/src/Discord-Bot/bin/Release/netcoreapp2.0/data/Discord-Bot.db" "$root/Discord-Bot/src/Discord-Bot/bin/Release/netcoreapp2.1/data/Discord-Bot.db" 1>/dev/null 2>&1
-    mv -f "$root/Discord-Bot/src/Discord-Bot/bin/Release/netcoreapp1.0/data/Discord-Bot.db" "$root/Discord-Bot/src/Discord-Bot/bin/Release/netcoreapp1.0/data/Discord-Bot_old.db" 1>/dev/null 2>&1
-	mv -f "$root/Discord-Bot/src/Discord-Bot/bin/Release/netcoreapp1.1/data/Discord-Bot.db" "$root/Discord-Bot/src/Discord-Bot/bin/Release/netcoreapp1.1/data/Discord-Bot_old.db" 1>/dev/null 2>&1
-    mv -f "$root/Discord-Bot/src/Discord-Bot/bin/Release/netcoreapp2.0/data/Discord-Bot.db" "$root/Discord-Bot/src/Discord-Bot/bin/Release/netcoreapp2.0/data/Discord-Bot_old.db" 1>/dev/null 2>&1
+    cp -RT "$root/Discord-Bot_old/src/NadekoBot/bin/" "$root/Discord-Bot/src/NadekoBot/bin/" 1>/dev/null 2>&1
+    cp -RT "$root/Discord-Bot/src/NadekoBot/bin/Release/netcoreapp1.0/data/Discord-Bot.db" "$root/Discord-Bot/src/NadekoBot/bin/Release/netcoreapp2.1/data/Discord-Bot.db" 1>/dev/null 2>&1
+	cp -RT "$root/Discord-Bot/src/NadekoBot/bin/Release/netcoreapp1.1/data/Discord-Bot.db" "$root/Discord-Bot/src/NadekoBot/bin/Release/netcoreapp2.1/data/Discord-Bot.db" 1>/dev/null 2>&1
+    cp -RT "$root/Discord-Bot/src/NadekoBot/bin/Release/netcoreapp2.0/data/Discord-Bot.db" "$root/Discord-Bot/src/NadekoBot/bin/Release/netcoreapp2.1/data/Discord-Bot.db" 1>/dev/null 2>&1
+    mv -f "$root/Discord-Bot/src/NadekoBot/bin/Release/netcoreapp1.0/data/Discord-Bot.db" "$root/Discord-Bot/src/NadekoBot/bin/Release/netcoreapp1.0/data/Discord-Bot_old.db" 1>/dev/null 2>&1
+	mv -f "$root/Discord-Bot/src/NadekoBot/bin/Release/netcoreapp1.1/data/Discord-Bot.db" "$root/Discord-Bot/src/NadekoBot/bin/Release/netcoreapp1.1/data/Discord-Bot_old.db" 1>/dev/null 2>&1
+    mv -f "$root/Discord-Bot/src/NadekoBot/bin/Release/netcoreapp2.0/data/Discord-Bot.db" "$root/Discord-Bot/src/NadekoBot/bin/Release/netcoreapp2.0/data/Discord-Bot_old.db" 1>/dev/null 2>&1
     echo ""
     echo "Database copied to the new version"
-    cp -RT "$root/Discord-Bot_old/src/Discord-Bot/data/" "$root/Discord-Bot/src/Discord-Bot/data/" 1>/dev/null 2>&1
+    cp -RT "$root/Discord-Bot_old/src/NadekoBot/data/" "$root/Discord-Bot/src/NadekoBot/data/" 1>/dev/null 2>&1
     echo ""
     echo "Other data copied to the new version"
 fi
