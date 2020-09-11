@@ -32,7 +32,7 @@ cd "$tempdir"
 
 echo ""
 echo "Downloading Discord-Bot, please wait."
-git clone -b 1.9 --recursive --depth 1 https://github.com/rd184/Discord-Bot
+git clone -b 1.9 --recursive --depth 1 https://github.com/slimshot/Discord-Bot
 echo ""
 echo "Discord-Bot downloaded."
 
